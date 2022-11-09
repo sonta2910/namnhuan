@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính năm nhuận</title>
+</head>
+<body>
+<p> Nhập số năm cần tính:</p>
+<input type="number" id="namnhuan"/>
+<button onclick="nam()">Kiểm tra</button>
+<p id="nam"></p>
+<script>
+  function nam() {
+    let a = document.getElementById("namnhuan").value
+    let b
+        if((a%4==0 && a%100!=0) || (a%400==0)) {
+        b = "Năm nhuận"
+        }else{
+          b = "Không phải năm nhuận"
+        }
+        document.getElementById("nam").innerHTML = b
+  }
+</script>
+</body>
+</html>
